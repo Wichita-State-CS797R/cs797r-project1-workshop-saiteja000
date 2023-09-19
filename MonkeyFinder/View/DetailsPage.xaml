@@ -30,6 +30,13 @@
             Source="{Binding Monkey.Image}"
             WidthRequest="160"/>
         </Border>
+        <Button Text="Show on Map" 
+        Command="{Binding OpenMapCommand}"
+        HorizontalOptions="Center" 
+        WidthRequest="200" 
+        Margin="8"
+        Style="{StaticResource ButtonOutline}"/>
+                
 
         <Label Style="{StaticResource LargeLabel}" 
         Grid.Row="1"
