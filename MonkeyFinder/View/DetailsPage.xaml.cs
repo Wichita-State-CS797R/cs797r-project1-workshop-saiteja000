@@ -1,9 +1,14 @@
 namespace MonkeyFinder;
 
+[QueryProperty(nameof(Monkey), "monkey")]
 public partial class DetailsPage : ContentPage
 {
-	public DetailsPage()
-	{
-		InitializeComponent();
-	}
+
+    public DetailsPage(MonkeyDetailsViewModel viewModel)
+    {
+        InitializeComponent();
+        BindingContext = viewModel;
+    }
+
+    
 }

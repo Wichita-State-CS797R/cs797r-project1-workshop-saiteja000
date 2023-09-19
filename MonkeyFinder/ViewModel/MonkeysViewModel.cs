@@ -8,7 +8,7 @@ public partial class MonkeysViewModel : BaseViewModel
     MonkeyService monkeyService;
     
 
-    public MonkeysViewModel()
+    public MonkeysViewModel(MonkeyService monkeyService)
     {
         Title = "Monkey Finder";
         this.monkeyService = monkeyService;
@@ -43,5 +43,17 @@ public partial class MonkeysViewModel : BaseViewModel
             IsBusy = false;
         }
 
+    }
+
+    [RelayCommand]
+    async Task GoToDetails(Monkey monkey)
+    {
+        if (monkey == null)
+            return;
+
+        await Shell.Current.GoToAsync(nameof(DetailsPage), true, new Dictionary<string, object>
+    {
+        {"Monkey", monkey }
+    });
     }
 }
