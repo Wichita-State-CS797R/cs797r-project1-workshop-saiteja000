@@ -51,7 +51,8 @@
         </CollectionView>
 
 
-        <Button Text="Get Monkeys" 
+        <Button Text="Get Monkeys"
+                BackgroundColor="Aqua"
                 Command="{Binding GetMonkeysCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
@@ -60,6 +61,7 @@
                 Margin="8"/>
         <Button Text="Find Closest" 
             Command="{Binding GetClosestMonkeyCommand}"
+            BackgroundColor="Aqua"
             IsEnabled="{Binding IsNotBusy}"
             Grid.Row="1"
             Grid.Column="1"
